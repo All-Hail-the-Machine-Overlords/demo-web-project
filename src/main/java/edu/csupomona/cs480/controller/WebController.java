@@ -1,5 +1,6 @@
 package edu.csupomona.cs480.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,9 @@ import org.springframework.web.servlet.ModelAndView;
 import edu.csupomona.cs480.App;
 import edu.csupomona.cs480.data.User;
 import edu.csupomona.cs480.data.provider.UserManager;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 
 /**
@@ -53,12 +57,38 @@ public class WebController {
 	}
 	
 	/**
-	 * Returns a truism about Joseph Cauthen
+	 * Joseph Cauthen addition for Assignment 4 
+	 * Sep 20th, 2019
+	 * 
+	 * copies the html from the jsoup documentation page and returns it
+	 * in a get request
+	 * 
+	 */
+	@RequestMapping(value = "/cs480/jsoupdoc", method = RequestMethod.GET)
+	String jsoupDoc() {
+		String html = "";
+		try {
+			html = Jsoup.connect("https://jsoup.org/apidocs/org/jsoup/Jsoup.html#connect-java.lang.String-").get()
+					.toString();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return html;
+	}
+	
+	/**
+	 * Joseph Cauthen addition for Assignment 3 
+	 * Sep 20th, 2019
+	 * 
+	 * Returns a truth about Joseph Cauthen
+	 * 
 	 */
 	@RequestMapping(value = "/cs480/joeyrocks", method = RequestMethod.GET)
 	String joeyRocks() {
 		return "Joey Rocks!!!";
 	}
+
 
 	/**
 	 * This is a simple example of how to use a data manager
