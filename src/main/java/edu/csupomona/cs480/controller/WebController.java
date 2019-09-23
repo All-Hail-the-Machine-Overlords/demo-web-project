@@ -89,6 +89,18 @@ public class WebController {
 		return "Joey Rocks!!!";
 	}
 
+	/**
+	 * Ruth Nuttall addition for Assignment 3 
+	 * Sep 22th, 2019
+	 * 
+	 * Returns a string about Ruth
+	 * 
+	 */
+	@RequestMapping(value = "/cs480/buf", method = RequestMethod.GET)
+	String buf() {
+		return "Buf Nutella";
+	}
+
 
 	/**
 	 * This is a simple example of how to use a data manager
