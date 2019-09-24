@@ -127,6 +127,18 @@ public class WebController {
 	}
 
 	/**
+	 * Sara Joshi's addition for Assignment 3 
+	 * Sep 23rd, 2019
+	 * 
+	 * Returns a string about Sara that is entirely true
+	 * 
+	 */
+	@RequestMapping(value = "/cs480/legend", method = RequestMethod.GET)
+	String legend() {
+		return "Sara is a legend.";
+	}
+	
+	/**
 	 * This is a simple example of how to use a data manager
 	 * to retrieve the data and return it as an HTTP response.
 	 * <p>
