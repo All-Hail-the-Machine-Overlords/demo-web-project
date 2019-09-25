@@ -122,7 +122,7 @@ public class WebController {
 	 * 
 	 */
 	@RequestMapping(value = "/cs480/sailor", method = RequestMethod.GET)
-	String sailor() {
+	String gitPro() {
 		return "Kenneth is good at git";
 	}
 
