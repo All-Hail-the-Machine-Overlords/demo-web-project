@@ -18,6 +18,10 @@ import edu.csupomona.cs480.data.provider.UserManager;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+import org.slf4j.*;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
+
 
 /**
  * This is the controller used by Spring framework.
@@ -40,6 +44,8 @@ public class WebController {
 	 */
 	@Autowired
 	private UserManager userManager;
+	
+	private static final Logger logger = LoggerFactory.getLogger(App.class);
 
 	/**
 	 * This is a simple example of how the HTTP API works.
@@ -75,6 +81,17 @@ public class WebController {
 		}
 
 		return html;
+	}
+	
+	/**
+	 * Kenneth-Matthew Velarde addition for Assignment #4
+	 * Sep, 25th, 2019
+	 * 
+	 * prints out a message to the console
+	 */
+	public void logTest() {
+		Logger logger = LoggerFactory.getLogger(App.class);
+		logger.info("This works");
 	}
 	
 	/**
@@ -122,7 +139,7 @@ public class WebController {
 	 * 
 	 */
 	@RequestMapping(value = "/cs480/sailor", method = RequestMethod.GET)
-	String sailor() {
+	String gitPro() {
 		return "Kenneth is good at git";
 	}
 

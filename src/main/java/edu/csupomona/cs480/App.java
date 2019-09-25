@@ -6,8 +6,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import org.slf4j.*;
+
 import edu.csupomona.cs480.data.provider.FSUserManager;
 import edu.csupomona.cs480.data.provider.UserManager;
+
+
 
 @Configuration
 @EnableAutoConfiguration
@@ -36,5 +40,6 @@ public class App {
     public static void main(String[] args) throws Exception {
         // Run Spring Boot
         SpringApplication.run(App.class, args);
+        
     }
 }
