@@ -132,6 +132,22 @@ public class WebController {
 		Fraction answer = f.add(g); 
 		return "1";
 	}
+
+	/**
+         * Sana Talwar addition for Assignment 4
+         * Sep 25th, 2019
+         *
+         *
+         *
+         */
+        @RequestMapping(value = "/cs480/fraction_addition", method = RequestMethod.GET)
+        long checkFreeSpace()
+	{
+		long freeSpace = FileSystemUtils.freeSpaceKb("/");
+		return freeSpace;
+	}
+
+        }
         
 	/**
 	 * Sana Talwar addition for Assignment 3 
