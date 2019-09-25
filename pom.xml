@@ -32,11 +32,27 @@
 			</exclusions>
 		</dependency>
 		
+		<!-- Added by Kenneth-Matthew Velarde Sep 25th, 2019 -->
+		<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>2.0.0-alpha0</version>
+		</dependency>
+
+		
 		<!-- Added by Joseph Cauthen Sep 21st, 2019 -->
 		<dependency>
     		<groupId>org.jsoup</groupId>
     		<artifactId>jsoup</artifactId>
     		<version>1.11.3</version>
+		</dependency>
+		
+		<!-- Added by Ruth Nuttall Sep 25st, 2019 -->	
+
+		<dependency>
+			<groupId>commons-math</groupId>
+			<artifactId>commons-math</artifactId>
+			<version>20040218.045431</version>
 		</dependency>
 
 		<dependency>

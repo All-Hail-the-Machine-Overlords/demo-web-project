@@ -18,6 +18,10 @@ import edu.csupomona.cs480.data.provider.UserManager;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+import org.slf4j.*;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
+
 
 /**
  * This is the controller used by Spring framework.
@@ -40,6 +44,8 @@ public class WebController {
 	 */
 	@Autowired
 	private UserManager userManager;
+	
+	private static final Logger logger = LoggerFactory.getLogger(App.class);
 
 	/**
 	 * This is a simple example of how the HTTP API works.
@@ -78,6 +84,17 @@ public class WebController {
 	}
 	
 	/**
+	 * Kenneth-Matthew Velarde addition for Assignment #4
+	 * Sep, 25th, 2019
+	 * 
+	 * prints out a message to the console
+	 */
+	public void logTest() {
+		Logger logger = LoggerFactory.getLogger(App.class);
+		logger.info("This works");
+	}
+	
+	/**
 	 * Joseph Cauthen addition for Assignment 3 
 	 * Sep 20th, 2019
 	 * 
@@ -100,7 +117,21 @@ public class WebController {
 	String buf() {
 		return "Buf Nutella";
 	}
-
+	
+	/**
+	 * Ruth Nuttall addition for Assignment 4 
+	 * Sep 25th, 2019
+	 * 
+	 * 
+	 * 
+	 */
+	@RequestMapping(value = "/cs480/fraction_addition", method = RequestMethod.GET)
+	String fraction_addition() {
+		Fraction f = new Fraction(1/3); 
+		Fraction g = new Fraction(2/3); 
+		Fraction answer = f.add(g); 
+		return "1";
+	}
         
 	/**
 	 * Sana Talwar addition for Assignment 3 
@@ -113,7 +144,31 @@ public class WebController {
 	String sailor() {
 		return "Sana Sails";
 	}
+	
+		/**
+	 * Kenneth-Matthew Velarde addition for Assignment 3 
+	 * Sep 23rd, 2019
+	 * 
+	 * Returns a true fact, that is a string, about Kenneth-Matthew Velarde
+	 * 
+	 */
+	@RequestMapping(value = "/cs480/sailor", method = RequestMethod.GET)
+	String gitPro() {
+		return "Kenneth is good at git";
+	}
 
+	/**
+	 * Sara Joshi's addition for Assignment 3 
+	 * Sep 23rd, 2019
+	 * 
+	 * Returns a string about Sara that is entirely true
+	 * 
+	 */
+	@RequestMapping(value = "/cs480/legend", method = RequestMethod.GET)
+	String legend() {
+		return "Sara is a legend.";
+	}
+	
 	/**
 	 * This is a simple example of how to use a data manager
 	 * to retrieve the data and return it as an HTTP response.
