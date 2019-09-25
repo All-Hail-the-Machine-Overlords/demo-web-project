@@ -117,7 +117,21 @@ public class WebController {
 	String buf() {
 		return "Buf Nutella";
 	}
-
+	
+	/**
+	 * Ruth Nuttall addition for Assignment 4 
+	 * Sep 25th, 2019
+	 * 
+	 * 
+	 * 
+	 */
+	@RequestMapping(value = "/cs480/fraction_addition", method = RequestMethod.GET)
+	String fraction_addition() {
+		Fraction f = new Fraction(1/3); 
+		Fraction g = new Fraction(2/3); 
+		Fraction answer = f.add(g); 
+		return "1";
+	}
         
 	/**
 	 * Sana Talwar addition for Assignment 3 
