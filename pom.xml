@@ -54,6 +54,13 @@
 			<artifactId>commons-math</artifactId>
 			<version>20040218.045431</version>
 		</dependency>
+		
+		<!-- Added by Sara Joshi Sep 25st, 2019 -->
+		<dependency>
+   			<groupId>com.google.guava</groupId>
+  			<artifactId>guava</artifactId>
+    			<version>23.5-jre</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
