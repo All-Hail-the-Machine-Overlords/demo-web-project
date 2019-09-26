@@ -95,6 +95,22 @@ public class WebController {
 	}
 	
 	/**
+	 * Sara Joshi addition for Assignment #4
+	 * Sep, 25th, 2019
+	 * 
+	 * prints an iterable list without any null values
+	 */
+	@RequestMapping(value = "/cs480/non_null", method = RequestMethod.GET)
+	public void non_null() {
+		List<String> withNulls = Lists.newArrayList("Sara", "Kenneth", null, "Sana", "Ruth", "Joey");
+		Iterable<String> withoutNuls = Iterables.filter(withNulls, Predicates.notNull());
+		assert Iterables.all(withoutNuls, Predicates.notNull());
+		for(Object o : withoutNuls){
+		    System.out.println(o.toString());
+		}
+	}
+	
+	/**
 	 * Joseph Cauthen addition for Assignment 3 
 	 * Sep 20th, 2019
 	 * 
